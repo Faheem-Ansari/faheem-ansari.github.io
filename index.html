@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Faheem Ansari</title>
+  <meta name="description" content="Faheem Ansari builds products that decide what people and AI agents are allowed to do. Product leader in security, identity and platform.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;500&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,800;1,400&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top">Faheem Ansari</a>
+    <nav aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-text">
+        <h1>I build products that decide what people and AI agents are allowed to do.</h1>
+        <p class="lede">Product leader for security, identity and platform at Ciena's Blue Planet software division. I started as a security engineer and still think like one. My focus now is the question every company adopting AI agents faces: who gets access to what, and who decides.</p>
+        <p class="lede-small">Try it. Pick an agent and a request, and see what the policy decides.</p>
+      </div>
+
+      <div class="access" aria-labelledby="access-title">
+        <h2 class="access-title" id="access-title">Access check</h2>
+        <div class="controls">
+          <label for="agent">Agent</label>
+          <select id="agent">
+            <option value="deploy-bot">deploy-bot: ships services</option>
+            <option value="research-bot">research-bot: reads documentation</option>
+            <option value="unknown">unknown agent: no valid token</option>
+          </select>
+          <label for="request">Wants to</label>
+          <select id="request"></select>
+        </div>
+        <div class="verdict" id="verdict" aria-live="polite">
+          <p class="decision" id="decision"></p>
+          <p class="reason" id="reason"></p>
+          <button type="button" class="approve" id="approve" hidden>Approve this request</button>
+        </div>
+        <div class="log">
+          <h3 class="log-title">Audit log</h3>
+          <ol class="log-lines" id="log"></ol>
+        </div>
+        <p class="access-note">These are the same rules my open-source <a href="https://github.com/Faheem-Ansari/agent-access-gateway">Agent Access Gateway</a> enforces for real AI agents.</p>
+      </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <h2 id="work-title">Work</h2>
+
+      <article class="case">
+        <h3>Taking a new product from idea to launch in 13 months</h3>
+        <p>Configuration &amp; Change Management started as a gap I kept hearing about from operators and in RFPs: no single place to manage network changes, audit them and prove compliance. I built the case, chose the foundations that had to ship first, and made AI agents part of the product from day one, with access controls on every agent action. It launched in 13 months with four agents in production.</p>
+      </article>
+
+      <article class="case">
+        <h3>Building product security where none existed</h3>
+        <p>When I took on product security in 2021, the portfolio had no secure development process. I built one on Microsoft SDL, OWASP and NIST guidance, made security sign-off a release gate, and automated the scanning, SBOMs and vulnerability reporting that used to be manual. It now covers seven products.</p>
+      </article>
+
+      <article class="case">
+        <h3>Rebuilding identity on open standards</h3>
+        <p>Authentication had grown product by product. I moved it onto OAuth 2.0, OpenID Connect, SAML and JWT, including machine-to-machine access, so customers connect their own identity providers without custom work.</p>
+      </article>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <article class="project">
+        <h3><a href="https://github.com/Faheem-Ansari/agent-access-gateway">Agent Access Gateway</a></h3>
+        <p>An MCP server that gives AI agents least-privilege access to tools, asks a person to approve sensitive actions, and keeps a tamper-evident audit log. Approvals work once, for one exact request.</p>
+        <p class="meta">Python, Model Context Protocol, open source</p>
+      </article>
+      <p class="next">Next: per-agent rate limits, and approvals confirmed with a passkey.</p>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <p>Sixteen years across networking, security and cloud. I started out cabling datacenters and running an internet provider's network in Mumbai, secured service provider networks as a consulting engineer at Cisco, and moved into product to build what I used to deploy. Today I lead platform, identity, product security and AI products for software that telecom operators run worldwide.</p>
+      <ul class="facts">
+        <li>CCIE Security #33480</li>
+        <li>Executive MBA, Rotman School of Management</li>
+        <li>Based in Toronto</li>
+      </ul>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p>The best way to reach me is <a href="https://www.linkedin.com/in/faheem-ansari-b9362047/">LinkedIn</a>. My code lives on <a href="https://github.com/Faheem-Ansari">GitHub</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Faheem Ansari. Hosted on GitHub Pages.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
